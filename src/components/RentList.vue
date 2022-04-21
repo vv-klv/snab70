@@ -156,7 +156,7 @@ export default {
                         },
                     ],
                     price: 400,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Фиолент Б2-30.jpg')
                 },
                 {
                     id: 5,
@@ -184,7 +184,7 @@ export default {
                         },
                     ],
                     price: 400,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Bosch GBH 240.jpg')
                 },
                 {
                     id: 6,
@@ -216,7 +216,7 @@ export default {
                         },
                     ],
                     price: 500,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Bosch GAS 20 L.jpg')
                 },
                 {
                     id: 7,
@@ -245,7 +245,7 @@ export default {
                     ],
                     extra: `Точная регулировка глубины`,
                     price: 500,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Bosch POF 1400.jpg')
                 },
                 {
                     id: 8,
@@ -277,7 +277,7 @@ export default {
                         },
                     ],
                     price: 400,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/ЗУБР ЗПТ-210-1600 ПЛ.jpg')
                 },
                 {
                     id: 9,
@@ -313,7 +313,7 @@ export default {
                         },
                     ],
                     price: 300,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Фиолент ПД7-75.jpg')
                 },
                 {
                     id: 10,
@@ -338,7 +338,7 @@ export default {
                     ],
                     extra: `Пильная цепь (расходный материал) приобретается отдельно`,
                     price: 400,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Makita UC4041A.jpg')
                 },
                 {
                     id: 11,
@@ -363,7 +363,7 @@ export default {
                     ],
                     extra: `Сетевая вилка в наличии`,
                     price: 300,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Парма АС-201И.jpg')
                 },
                 {
                     id: 12,
@@ -399,7 +399,7 @@ export default {
                         },
                     ],
                     price: 1000,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Patriot TC600.jpg')
                 },
                 {
                     id: 13,
@@ -431,7 +431,7 @@ export default {
                         },
                     ],
                     price: 300,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Интерскол МБ-43-26.jpg')
                 },
                 {
                     id: 14,
@@ -463,11 +463,11 @@ export default {
                         },
                     ],
                     price: 400,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Калибр БСЭ-140.jpg')
                 },
                 {
                     id: 15,
-                    title: 'Компрессор поршневой P.I.T. P55026',
+                    title: 'Компрессор поршневой PIT P55026',
                     descr: [
                         {
                             spec: 'Мощность, Вт',
@@ -491,7 +491,7 @@ export default {
                         },
                     ],
                     price: 400,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/PIT P55026.jpg')
                 },
                 {
                     id: 16,
@@ -515,7 +515,7 @@ export default {
                         },
                     ],
                     price: 400,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Stihl 036.jpg')
                 },
                 {
                     id: 17,
@@ -548,7 +548,7 @@ export default {
                     ],
                     extra: `Ручной старт`,
                     price: 300,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Patriot SRGE 950.jpg')
                 },
                 {
                     id: 18,
@@ -588,7 +588,7 @@ export default {
                         },
                     ],
                     price: 500,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Kerona 30000.jpg')
 
                 },
                 {
@@ -629,12 +629,12 @@ export default {
                         },
                     ],
                     price: 400,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Ballu BHDP-20.jpg')
 
                 },
                 {
                     id: 20,
-                    title: 'Бензиновый генератор Кратон 6,5 кВт',
+                    title: 'Бензиновый генератор Кратон GG-6,0ME',
                     descr: [
                         {
                             spec: 'Мощность, Вт',
@@ -667,7 +667,7 @@ export default {
                     ],
                     extra: `Электронный старт, ручной старт`,
                     price: 800,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Кратон GG-6,0ME.jpg')
                 },
                 {
                     id: 20,
@@ -701,7 +701,7 @@ export default {
                     extra: `Возможность подключения к пылесосу, регулировка
                             количества оборотов`,
                     price: 300,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Bosch GEX 125-1 AE.jpg')
                 },
                 {
                     id: 21,
@@ -737,7 +737,7 @@ export default {
                         },
                     ],
                     price: 700,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Aurora Airhold 42.jpg')
                 },
                 {
                     id: 22,
@@ -765,7 +765,7 @@ export default {
                         },
                     ],
                     price: 400,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Bosch GWS 22-230H.jpg')
                 },
                 {
                     id: 23,
@@ -785,7 +785,7 @@ export default {
                         },
                     ],
                     price: 700,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Makita HM1100C.jpg')
                 },
                 {
                     id: 24,
@@ -813,7 +813,7 @@ export default {
                         },
                     ],
                     price: 800,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/AC DC T0044.jpg')
                 },
                 {
                     id: 25,
@@ -846,7 +846,7 @@ export default {
                     ],
                     extra: `Ременной привод`,
                     price: 600,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Кратон 300-50.jpg')
                 },
                 {
                     id: 26,
@@ -877,8 +877,8 @@ export default {
                             value: '4'
                         },
                     ],
-                    price: 800,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    price: 500,
+                    imgsrc: require('../assets/ТУ-4883.jpg')
                 },
                 {
                     id: 27,
@@ -918,82 +918,45 @@ export default {
                         },
                     ],
                     price: 800,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                    imgsrc: require('../assets/Kerona 50000.jpg')
                 },
-                {
-                    id: 20,
-                    title: 'Бензиновый генератор Кратон 6,5 кВт',
-                    descr: [
-                        {
-                            spec: 'Мощность, Вт',
-                            value: '6 500'
-                        },
-                        {
-                            spec: 'Выходные характеристики',
-                            value: '220 В, 16 А, 50 Гц'
-                        },
-                        {
-                            spec: 'Тип двигателя',
-                            value: 'бензиновый, 2-тактный'
-                        },
-                        {
-                            spec: 'Объем двигателя, см3',
-                            value: '420'
-                        },
-                        {
-                            spec: 'Расход топлива, л/ч',
-                            value: '2,9'
-                        },
-                        {
-                            spec: 'Топливо',
-                            value: 'дизельное топливо'
-                        },
-                        {
-                            spec: 'Вес, кг',
-                            value: '88'
-                        },
-                    ],
-                    extra: `Электронный старт, ручной старт`,
-                    price: 800,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
-                },
-                {
-                    id: 20,
-                    title: 'Бензиновый генератор Кратон 6,5 кВт',
-                    descr: [
-                        {
-                            spec: 'Мощность, Вт',
-                            value: '6 500'
-                        },
-                        {
-                            spec: 'Выходные характеристики',
-                            value: '220 В, 16 А, 50 Гц'
-                        },
-                        {
-                            spec: 'Тип двигателя',
-                            value: 'бензиновый, 2-тактный'
-                        },
-                        {
-                            spec: 'Объем двигателя, см3',
-                            value: '420'
-                        },
-                        {
-                            spec: 'Расход топлива, л/ч',
-                            value: '2,9'
-                        },
-                        {
-                            spec: 'Топливо',
-                            value: 'дизельное топливо'
-                        },
-                        {
-                            spec: 'Вес, кг',
-                            value: '88'
-                        },
-                    ],
-                    extra: `Электронный старт, ручной старт`,
-                    price: 800,
-                    imgsrc: require('../assets/Кратон DHE-1700.jpg')
-                },
+                // {
+                //     id: 28,
+                //     title: 'Бензиновый генератор Кратон 6,5 кВт',
+                //     descr: [
+                //         {
+                //             spec: 'Мощность, Вт',
+                //             value: '6 500'
+                //         },
+                //         {
+                //             spec: 'Выходные характеристики',
+                //             value: '220 В, 16 А, 50 Гц'
+                //         },
+                //         {
+                //             spec: 'Тип двигателя',
+                //             value: 'бензиновый, 2-тактный'
+                //         },
+                //         {
+                //             spec: 'Объем двигателя, см3',
+                //             value: '420'
+                //         },
+                //         {
+                //             spec: 'Расход топлива, л/ч',
+                //             value: '2,9'
+                //         },
+                //         {
+                //             spec: 'Топливо',
+                //             value: 'дизельное топливо'
+                //         },
+                //         {
+                //             spec: 'Вес, кг',
+                //             value: '88'
+                //         },
+                //     ],
+                //     extra: `Электронный старт, ручной старт`,
+                //     price: 800,
+                //     imgsrc: require('../assets/Кратон DHE-1700.jpg')
+                // },
             ]
         }
     }

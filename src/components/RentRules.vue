@@ -1,5 +1,5 @@
 <template>
-    <v-expansion-panels variant="accordion" id="rules">
+    <v-expansion-panels variant="accordion">
         <v-expansion-panel>
             <v-expansion-panel-title class="rules__title">
                 На что следует обратить внимание
@@ -35,7 +35,7 @@
                 </v-list-item>
             </v-expansion-panel-text>
         </v-expansion-panel>
-        <v-expansion-panel>
+        <v-expansion-panel class="rules__item">
             <v-expansion-panel-title class="rules__title">
                 Правила проката инструмента и порядок действий для физических
                 лиц
@@ -69,7 +69,7 @@
 
             </v-expansion-panel-text>
         </v-expansion-panel>
-        <v-expansion-panel>
+        <v-expansion-panel class="rules__item">
             <v-expansion-panel-title class="rules__title">
                 Правила проката инструмента и порядок действий для юридических
                 лиц
@@ -113,11 +113,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../css/_variables';
 
 .rules {
+
     &__title {
         font-size: 16px;
         height: 25px;
+
+        &:hover, &.active {
+            background-color: lighten($secondary-color, 40) !important;
+        }
     }
 
     &__text {

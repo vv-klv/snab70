@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar class="navbar" color="#c9c9c9">
+    <v-app-bar class="navbar" color="#3779aa">
         <router-link to="/rent">
             <img
                 :src="require('@/assets/logo-3.svg')"
@@ -20,12 +20,6 @@
             >
                 Контакты, схема проезда
             </v-btn>
-            <v-btn
-                class="navbar__btn"
-                @click="$router.push('/rent#rules')"
-            >
-                Правила
-            </v-btn>
         </div>
         <v-app-bar-nav-icon
             @click.stop="drawer = !drawer"
@@ -35,22 +29,22 @@
 
     <v-navigation-drawer v-model="drawer" position="right">
         <v-list>
-            <v-list-item link>
-                <v-list-item-title @click="$router.push('/rent')">
+            <v-list-item
+                link
+                class="nav-item"
+                rounded="xl"
+                @click="$router.push('/rent')"
+            >
                     Прокат инструментов
-                </v-list-item-title>
             </v-list-item>
 
-            <v-list-item link>
-                <v-list-item-title @click="$router.push('/contacts')">
+            <v-list-item
+                link
+                class="nav-item"
+                rounded="xl"
+                @click="$router.push('/contacts')"
+            >
                     Контакты, схема проезда
-                </v-list-item-title>
-            </v-list-item>
-
-            <v-list-item link>
-                <v-list-item-title @click="$router.push('/rent#rules')">
-                    Правила
-                </v-list-item-title>
             </v-list-item>
         </v-list>
     </v-navigation-drawer>
@@ -67,6 +61,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '../css/_variables';
+
+.nav-item:hover {
+    background-color: lighten($secondary-color, 45);
+}
 
 .navbar {
     display: flex;
@@ -91,6 +89,7 @@ export default {
 
     &__burger {
         margin-left: auto;
+        color: #fff;
     }
 
     &__btn {
@@ -98,16 +97,12 @@ export default {
         box-shadow: $shadow;
 
         a {
-            color: black;
+            color: #000;
         }
 
         @media (max-width: 575px) {
             font-size: 12px;
         }
-    }
-
-    @media (max-width: 991px) {
-
     }
 }
 </style>
