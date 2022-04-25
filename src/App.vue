@@ -24,6 +24,7 @@ export default {
 
 .app {
     display: flex;
+    min-height: 100vh;
     background-image: url("./assets/bg-noise.png");
     background-repeat: repeat;
     background-blend-mode: lighten;

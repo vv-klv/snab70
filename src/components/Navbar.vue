@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar class="navbar" color="#3779aa">
+    <v-app-bar class="navbar">
         <router-link to="/rent">
             <img
                 :src="require('@/assets/logo-3.svg')"
@@ -7,18 +7,15 @@
                 alt="SASS logo"
             >
         </router-link>
-        <div class="navbar__btns">
-            <v-btn
-                class="navbar__btn"
-                @click="$router.push('/rent')"
-            >
+        <div class="navbar__btns d-none d-md-flex">
+            <v-btn class="navbar__btn" to="/rent">
                 Прокат инструментов
             </v-btn>
-            <v-btn
-                class="navbar__btn"
-                @click="$router.push('/contacts')"
-            >
+            <v-btn class="navbar__btn" to="/contacts">
                 Контакты, схема проезда
+            </v-btn>
+            <v-btn class="navbar__btn" to="/rules">
+                Правила
             </v-btn>
         </div>
         <v-app-bar-nav-icon
@@ -26,33 +23,14 @@
             class="navbar__burger d-md-none"
         />
     </v-app-bar>
-
-    <v-navigation-drawer v-model="drawer" position="right">
-        <v-list>
-            <v-list-item
-                link
-                class="nav-item"
-                rounded="xl"
-                @click="$router.push('/rent')"
-            >
-                    Прокат инструментов
-            </v-list-item>
-
-            <v-list-item
-                link
-                class="nav-item"
-                rounded="xl"
-                @click="$router.push('/contacts')"
-            >
-                    Контакты, схема проезда
-            </v-list-item>
-        </v-list>
-    </v-navigation-drawer>
+    <NavbarRight :drawer="drawer"/>
 </template>
 
 <script>
+import NavbarRight from '@/components/NavbarRight';
 export default {
     name: "Navbar",
+    components: {NavbarRight},
     data: () => ({
         drawer: false,
     }),
@@ -62,13 +40,10 @@ export default {
 <style lang="scss" scoped>
 @import '../css/_variables';
 
-.nav-item:hover {
-    background-color: lighten($secondary-color, 45);
-}
-
 .navbar {
     display: flex;
-    padding: 0 15px;
+    padding: 0 $gap-md;
+    background-color: $secondary-color;
 
     &__logo {
         display: block;
@@ -80,11 +55,7 @@ export default {
     &__btns {
         display: flex;
         margin-left: auto;
-        gap: $gap-md;
-
-        @media (max-width: 991px) {
-            display: none;
-        }
+        gap: $gap-sm;
     }
 
     &__burger {
@@ -93,12 +64,8 @@ export default {
     }
 
     &__btn {
-        background-color: #fff;
-        box-shadow: $shadow;
-
-        a {
-            color: #000;
-        }
+        height: 64px;
+        color: #fff;
 
         @media (max-width: 575px) {
             font-size: 12px;

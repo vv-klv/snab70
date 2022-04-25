@@ -2,25 +2,19 @@
     <h1 class="rent-header">
         Прокат строительного оборудования и инструментов
     </h1>
-    <p class="rent-descr">
-        Для ремонта в квартире, работ на даче, постройки дома, внутренней
-        отделки – у нас есть строительный инструмент для всех видов работ по
-        низким ценам.
-        <br>
-        Прокат инструмента в Томске – отличный и экономичный вариант при
-        проведении разовых или недолгосрочных работ.
-    </p>
+    <About/>
     <RentList/>
-    <RentRules/>
+    <RentRules :is-expanded="false"/>
 </template>
 
 <script>
+import About from '@/components/About';
 import RentList from '@/components/RentList';
 import RentRules from '@/components/RentRules';
 
 export default {
     name: "RentView",
-    components: {RentRules, RentList}
+    components: {About, RentRules, RentList}
 
 }
 </script>
@@ -40,7 +34,8 @@ export default {
     }
 
     &-descr {
-        font-size: 16px;
+        text-align: center;
+        font-size: 15px;
         margin-bottom: $gap-md;
 
         @media (max-width: 767px) {

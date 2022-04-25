@@ -1,5 +1,5 @@
 <template>
-    <RentRules/>
+    <RentRules :is-expanded="true"/>
 </template>
 
 <script>

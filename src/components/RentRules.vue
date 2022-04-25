@@ -1,6 +1,10 @@
 <template>
-    <v-expansion-panels variant="accordion">
-        <v-expansion-panel>
+    <v-expansion-panels
+        class="rules"
+        :v-model="isExpanded ? panel : []"
+        variant="accordion"
+    >
+        <v-expansion-panel >
             <v-expansion-panel-title class="rules__title">
                 На что следует обратить внимание
                 <template v-slot:actions>
@@ -35,7 +39,7 @@
                 </v-list-item>
             </v-expansion-panel-text>
         </v-expansion-panel>
-        <v-expansion-panel class="rules__item">
+        <v-expansion-panel>
             <v-expansion-panel-title class="rules__title">
                 Правила проката инструмента и порядок действий для физических
                 лиц
@@ -45,23 +49,23 @@
             </v-expansion-panel-title>
             <v-expansion-panel-text class="rules__text">
                 <v-list>
-                    <v-list-item>
+                    <v-list-item class="v-list-item">
                         Выбрать необходимое оборудование на сайте и оформить заявку
                         по телефону. При аренде инструмента физическими лицами предусмотрен
                         небольшой денежный залог для лиц, имеющих регистрацию за пределами
                         Томской области. Размер залога указан в карточке каждого товара.
                         Минимальный срок аренды инструмента - 1 cутки.
                     </v-list-item>
-                    <v-list-item>
+                    <v-list-item class="v-list-item">
                         Приехать к нам в офис, заключить договор проката инструмента,
                         оплатить весь срок предполагаемой аренды, и получить
                         инструмент.
                     </v-list-item>
-                    <v-list-item>
+                    <v-list-item class="v-list-item">
                         После завершения срока аренды сдать инструмент на наш склад.
                         Сдаваемый инструмент должен быть чистым.
                     </v-list-item>
-                    <v-list-item>
+                    <v-list-item class="v-list-item">
                         Получить обратно внесенный денежный залог, если он был
                         предусмотрен.
                     </v-list-item>
@@ -69,7 +73,7 @@
 
             </v-expansion-panel-text>
         </v-expansion-panel>
-        <v-expansion-panel class="rules__item">
+        <v-expansion-panel>
             <v-expansion-panel-title class="rules__title">
                 Правила проката инструмента и порядок действий для юридических
                 лиц
@@ -108,7 +112,16 @@
 
 <script>
 export default {
-    name: "RentRules"
+    name: "RentRules",
+    props: {
+        isExpanded: {
+        }
+    },
+    data() {
+        return {
+            panel: [0, 1, 2]
+        }
+    },
 }
 </script>
 
@@ -116,18 +129,34 @@ export default {
 @import '../css/_variables';
 
 .rules {
-
     &__title {
-        font-size: 16px;
+        font-size: 1rem;
+        text-align: left;
         height: 25px;
 
-        &:hover, &.active {
-            background-color: lighten($secondary-color, 40) !important;
+        @media (max-width: 575px) {
+            font-size: 14px;
         }
     }
 
     &__text {
-        font-size: 14px;
+        font-size: 0.875rem;
+    }
+}
+
+.v-list-item {
+    padding: 4px 0 !important;
+}
+
+.v-expansion-panel-title {
+    background-color: lighten($secondary-color, 40);
+
+    &:hover, &:hover > * {
+        background-color: lighten($secondary-color, 30);
+    }
+
+    &--active, &--active > * {
+        background-color: lighten($secondary-color, 30);
     }
 }
 </style>

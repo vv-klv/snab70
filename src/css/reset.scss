@@ -1,3 +1,5 @@
+@import '../css/_variables';
+
 *,
 *::before,
 *::after {
@@ -32,3 +34,8 @@ h1 {
     font-size: 28px;
     line-height: 1.2;
 }
+
+.v-expansion-panel-title__overlay {
+    display: none;
+}
+
