@@ -38,24 +38,23 @@ export default {
 
     &__title {
         text-transform: uppercase;
-        color: $primary-color;
+        color: $color-secondary;
         font-size: 1.3rem;
     }
 
     &__text {
-        font-size: 0.875rem;
+        font-size: $text-sm;
     }
 }
 
 .v-expansion-panel-title {
-    background-color: lighten($primary-color, 35);
+    background-color: $color-secondary--light;
 
     &:hover, &:hover > * {
-        background-color: lighten($primary-color, 30);
+        background-color: lighten($color-secondary--light, 1);
     }
-
     &--active, &--active > * {
-        background-color: lighten($primary-color, 30);
+        background-color: darken($color-secondary--light, 1);
     }
 }
 

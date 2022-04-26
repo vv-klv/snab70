@@ -4,7 +4,7 @@
     </h1>
     <About/>
     <RentList/>
-    <RentRules :is-expanded="false"/>
+    <RentRules/>
 </template>
 
 <script>
@@ -15,7 +15,6 @@ import RentRules from '@/components/RentRules';
 export default {
     name: "RentView",
     components: {About, RentRules, RentList}
-
 }
 </script>
 
@@ -25,7 +24,7 @@ export default {
 .rent {
     &-header {
         text-align: center;
-        color: $secondary-color;
+        color: $color-primary;
         margin-bottom: $gap-md;
 
         @media (max-width: 575px) {

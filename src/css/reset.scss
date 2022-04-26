@@ -14,6 +14,7 @@ html {
 
 body {
     font-family: -apple-system, Roboto, Arial, sans-serif;
+    font-size: $text-md;
     position: relative;
     min-height: 100%;
 }
@@ -31,11 +32,26 @@ a {
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 1.2;
 }
 
-.v-expansion-panel-title__overlay {
+.v-expansion-panel-title__overlay,
+.v-list-item__overlay {
+    display: none;
+}
+
+.v-list-item {
+    padding: 4px 0 !important;
+    min-height: 32px !important;
+}
+
+.v-field {
+    border-radius: 4px;
+    box-shadow: $shadow !important;
+}
+
+.v-input__details {
     display: none;
 }
 

@@ -28,7 +28,7 @@ export default {
     background-image: url("./assets/bg-noise.png");
     background-repeat: repeat;
     background-blend-mode: lighten;
-    background-color: lighten($secondary-color, 51) !important;
+    background-color: lighten($color-primary, 51) !important;
 }
 
 .container {

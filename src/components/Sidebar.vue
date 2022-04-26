@@ -1,9 +1,16 @@
 <template>
-    <v-navigation-drawer v-model="drawer" position="right">
-        <v-list>
+    <v-navigation-drawer
+        class="sidebar"
+        v-model="drawer"
+        position="right"
+        disable-resize-watcher
+    >
+        <v-list
+            class="sidebar__links"
+        >
             <v-list-item
-                to="/rent"
-                class="nav-item"
+                to="/"
+                class="sidebar__link"
                 rounded="xl"
             >
                 Прокат инструментов
@@ -11,7 +18,7 @@
 
             <v-list-item
                 to="/contacts"
-                class="nav-item"
+                class="sidebar__link"
                 rounded="xl"
             >
                 Контакты, схема проезда
@@ -19,7 +26,7 @@
 
             <v-list-item
                 to="/rules"
-                class="nav-item"
+                class="sidebar__link"
                 rounded="xl"
             >
                 Правила
@@ -30,10 +37,11 @@
 
 <script>
 export default {
-    name: "NavbarRight",
+    name: "Sidebar",
     props: {
         drawer: {
             type: Boolean,
+            default: true,
             required: true
         }
     }
@@ -43,12 +51,19 @@ export default {
 <style lang="scss" scoped>
 @import '../css/_variables';
 
-.nav-item {
-    font-weight: 600;
-    margin: 0 $gap-sm;
+.v-list-item {
+    padding: 8px 16px !important;
+}
 
-    &:hover {
-        background-color: lighten($secondary-color, 45);
+.sidebar {
+
+    &__link {
+        font-weight: 600;
+        margin: 0 $gap-sm;
+
+        &:hover {
+            background-color: $color-primary--light;
+        }
     }
 }
 </style>

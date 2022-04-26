@@ -1,37 +1,42 @@
 <template>
+    <v-textarea
+        class="search"
+        v-model="searchQuery"
+        label="Поиск инструмента"
+        variant="contained"
+        prepend-inner-icon="mdi-magnify"
+        color="#2b5e83"
+        rows="1"
+        autofocus
+        no-resize
+        clearable
+    />
     <div class="card-list">
-        <v-card class="card" v-for="(item, i) in rentItems" :key='i'>
-            <div class="card__wrapper">
-                <h3 class="card__title">{{ item.title }}</h3>
-                <ul class="card__descr">
-                    <li
-                        v-for="(prop, j) in item.descr"
-                        :key="j"
-                    >
-                        <b>{{ prop.spec }}</b> — {{ prop.value }}
-                    </li>
-                </ul>
-                <i class="card__extra">{{ item.extra }}</i>
-                <h4 class="card__price">
-                    Стоимость проката (сутки): {{ item.price }} руб.
-                </h4>
-            </div>
-            <div class="card__img">
-                <img
-                    :src="item.imgsrc"
-                    class="card__image"
-                    alt="Aztec BT80"
-                >
-            </div>
-        </v-card>
+        <h2 class="nothing-founded" v-show="searchedItems.length === 0">
+            Не найдено!
+        </h2>
+        <RentCard v-for="(item, i) in searchedItems" :items="item"/>
     </div>
 </template>
 
 <script>
+import RentCard from '@/components/RentCard';
+
 export default {
     name: "RentList",
+    components: {RentCard},
+    computed: {
+        searchedItems() {
+            return this.rentItems.filter(item =>
+                item.title.toLowerCase()
+                    .includes(this.searchQuery.toLowerCase()
+                    )
+            )
+        }
+    },
     data() {
         return {
+            searchQuery: '',
             rentItems: [
                 {
                     id: 1,
@@ -966,70 +971,21 @@ export default {
 <style lang="scss" scoped>
 @import "../css/_variables";
 
+.search {
+    margin: $gap-md auto;
+    width: 100%;
+}
+
+.nothing-founded {
+    font-size: calc($text-md * 2);
+    margin: $gap-md auto;
+    color: $color-secondary;
+}
+
 .card-list {
     display: flex;
     flex-direction: column;
     margin: $gap-md auto;
     gap: $gap-md;
-}
-
-.card {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    min-width: 210px;
-
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-right: auto;
-        width: 100%;
-        max-width: 400px;
-    }
-
-    &__title {
-        font-weight: bold;
-        line-height: 1.2;
-        text-transform: uppercase;
-        color: $primary-color;
-    }
-
-    &__descr {
-        margin-top: $gap-sm;
-        font-size: 14px;
-    }
-
-    &__extra {
-        margin-bottom: auto;
-        font-size: 14px;
-    }
-
-    &__price {
-        margin-top: $gap-sm;
-        color: $secondary-color;
-    }
-
-    &__img {
-        display: flex;
-        height: 220px;
-        width: 280px;
-        margin: auto 0 auto $gap-lg;
-    }
-
-    &__image {
-        object-fit: contain;
-        width: 100%;
-        height: 100%;
-    }
-
-    @media (max-width: 575px) {
-        flex-direction: column-reverse;
-
-        &__img {
-            margin: 0 auto $gap-md;
-            height: 180px;
-        }
-    }
 }
 </style>

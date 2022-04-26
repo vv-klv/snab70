@@ -1,20 +1,20 @@
 <template>
     <v-app-bar class="navbar">
-        <router-link to="/rent">
+        <router-link to="/">
             <img
-                :src="require('@/assets/logo-3.svg')"
                 class="navbar__logo"
-                alt="SASS logo"
+                :src="require('@/assets/logo-3.svg')"
+                alt="Б/Улавка logo"
             >
         </router-link>
-        <div class="navbar__btns d-none d-md-flex">
-            <v-btn class="navbar__btn" to="/rent">
+        <div class="navbar__links d-none d-md-flex">
+            <v-btn class="navbar__link" to="/">
                 Прокат инструментов
             </v-btn>
-            <v-btn class="navbar__btn" to="/contacts">
+            <v-btn class="navbar__link" to="/contacts">
                 Контакты, схема проезда
             </v-btn>
-            <v-btn class="navbar__btn" to="/rules">
+            <v-btn class="navbar__link" to="/rules">
                 Правила
             </v-btn>
         </div>
@@ -23,14 +23,14 @@
             class="navbar__burger d-md-none"
         />
     </v-app-bar>
-    <NavbarRight :drawer="drawer"/>
+    <Sidebar :drawer="drawer"/>
 </template>
 
 <script>
-import NavbarRight from '@/components/NavbarRight';
+import Sidebar from '@/components/Sidebar';
 export default {
     name: "Navbar",
-    components: {NavbarRight},
+    components: {Sidebar},
     data: () => ({
         drawer: false,
     }),
@@ -43,16 +43,16 @@ export default {
 .navbar {
     display: flex;
     padding: 0 $gap-md;
-    background-color: $secondary-color;
+    background-color: $color-primary;
 
     &__logo {
         display: block;
         height: 60px;
-        margin: auto 0;
+        margin: auto 0 auto $gap-md;
         padding: 1px 0;
     }
 
-    &__btns {
+    &__links {
         display: flex;
         margin-left: auto;
         gap: $gap-sm;
@@ -63,12 +63,12 @@ export default {
         color: #fff;
     }
 
-    &__btn {
+    &__link {
         height: 64px;
         color: #fff;
 
-        @media (max-width: 575px) {
-            font-size: 12px;
+        &:hover {
+            background-color: lighten($color-primary, 2);
         }
     }
 }

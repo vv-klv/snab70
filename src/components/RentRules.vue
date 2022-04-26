@@ -1,7 +1,7 @@
 <template>
     <v-expansion-panels
         class="rules"
-        :v-model="isExpanded ? panel : []"
+        v-model="expand"
         variant="accordion"
     >
         <v-expansion-panel >
@@ -115,13 +115,14 @@ export default {
     name: "RentRules",
     props: {
         isExpanded: {
+            type: Array
         }
     },
-    data() {
-        return {
-            panel: [0, 1, 2]
+    computed: {
+        expand() {
+            return this.$props.isExpanded;
         }
-    },
+    }
 }
 </script>
 
@@ -129,34 +130,31 @@ export default {
 @import '../css/_variables';
 
 .rules {
+
     &__title {
         font-size: 1rem;
         text-align: left;
-        height: 25px;
+        height: calc($text-md * 1.5);
 
         @media (max-width: 575px) {
-            font-size: 14px;
+            font-size: $text-sm;
         }
     }
 
     &__text {
-        font-size: 0.875rem;
+        font-size: $text-sm;
     }
-}
-
-.v-list-item {
-    padding: 4px 0 !important;
 }
 
 .v-expansion-panel-title {
-    background-color: lighten($secondary-color, 40);
+    background-color: $color-primary--light;
 
     &:hover, &:hover > * {
-        background-color: lighten($secondary-color, 30);
+        background-color: lighten($color-primary--light, 2);
     }
 
     &--active, &--active > * {
-        background-color: lighten($secondary-color, 30);
+        background-color: darken($color-primary--light, 2);
     }
 }
 </style>

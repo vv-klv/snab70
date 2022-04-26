@@ -20,10 +20,10 @@ export default {
 .footer {
     display: flex;
     justify-content: center;
-    max-height: 68px;
+    max-height: 64px;
     gap: $gap-sm;
     padding: $gap-md;
-    background-color: darken($secondary-color, 10);
+    background-color: darken($color-primary, 10);
 
     &__link {
         color: #fff;
@@ -33,7 +33,11 @@ export default {
         box-shadow: none;
 
         @media (max-width: 575px) {
-            font-size: 12px;
+            font-size: $text-sm;
+        }
+
+        &:hover {
+            background-color: darken($color-primary, 8);
         }
     }
 

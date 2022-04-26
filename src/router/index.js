@@ -6,10 +6,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    redirect: '/rent'
-  },
-  {
-    path: '/rent',
     name: 'rent',
     component: RentView
   },
