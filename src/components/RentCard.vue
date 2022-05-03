@@ -1,28 +1,25 @@
 <template>
-    <v-card
-        class="card"
-        :key='i'
-    >
+    <v-card class="card">
         <div class="card__wrapper">
-            <h3 class="card__title">{{ items.title }}</h3>
-            <ul class="card__descr">
+            <h3 class="card__title">{{ item.title }}</h3>
+            <ul class="card__specs">
                 <li
-                    v-for="(prop, j) in items.descr"
+                    v-for="(spec, j) in item.specs"
                     :key="j"
                 >
-                    <b>{{ prop.spec }}</b> — {{ prop.value }}
+                    <b>{{ spec.spec }}</b> — {{ spec.value }}
                 </li>
             </ul>
-            <i class="card__extra">{{ items.extra }}</i>
+            <i class="card__extra">{{ item.extra }}</i>
             <h4 class="card__price">
-                Стоимость проката (сутки): {{ items.price }} руб.
+                Стоимость проката (сутки): {{ item.price }} руб.
             </h4>
         </div>
         <div class="card__image-container">
             <img
-                :src="items.imgsrc"
+                :src="cardImg(item.imgsrc)"
                 class="card__image"
-                alt="Aztec BT80"
+                :alt="item.title"
             >
         </div>
     </v-card>
@@ -32,11 +29,16 @@
 export default {
     name: "RentCard",
     props: {
-        items: {
+        item: {
             type: [Array, Object],
             required: true
         }
-    }
+    },
+    methods: {
+        cardImg: function(path) {
+            return require("@/" + path);
+        },
+    },
 }
 </script>
 
@@ -69,7 +71,7 @@ export default {
         color: $color-secondary;
     }
 
-    &__descr {
+    &__specs {
         margin-top: $gap-sm;
         font-size: $text-sm;
     }
@@ -93,6 +95,7 @@ export default {
         @media (max-width: 575px) {
             margin: 0 auto $gap-md;
             height: 180px;
+            width: 100%;
         }
     }
 

@@ -58,8 +58,7 @@ export default {
 .sidebar {
 
     &__link {
-        font-weight: 600;
-        margin: 0 $gap-sm;
+        margin: $gap-sm;
 
         &:hover {
             background-color: $color-primary--light;

@@ -17,6 +17,7 @@ body {
     font-size: $text-md;
     position: relative;
     min-height: 100%;
+    overflow: hidden;
 }
 
 ul, ol, li {

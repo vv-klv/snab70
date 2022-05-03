@@ -134,7 +134,7 @@ export default {
     &__title {
         font-size: 1rem;
         text-align: left;
-        height: calc($text-md * 1.5);
+        height: $text-md * 1.5;
 
         @media (max-width: 575px) {
             font-size: $text-sm;

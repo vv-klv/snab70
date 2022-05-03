@@ -19,8 +19,9 @@
             </v-btn>
         </div>
         <v-app-bar-nav-icon
-            @click.stop="drawer = !drawer"
             class="navbar__burger d-md-none"
+            @click.stop="drawer = !drawer"
+            size="x-large"
         />
     </v-app-bar>
     <Sidebar :drawer="drawer"/>
@@ -42,7 +43,7 @@ export default {
 
 .navbar {
     display: flex;
-    padding: 0 $gap-md;
+    padding: 0 $gap-sm;
     background-color: $color-primary;
 
     &__logo {
@@ -61,10 +62,15 @@ export default {
     &__burger {
         margin-left: auto;
         color: #fff;
+
+        &:hover {
+            background-color: lighten($color-primary, 2);
+        }
     }
 
     &__link {
         height: 64px;
+        font-weight: 600;
         color: #fff;
 
         &:hover {
