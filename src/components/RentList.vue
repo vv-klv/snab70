@@ -48,8 +48,6 @@ export default {
     },
     computed: {
         searchedItems() {
-            const categories = Object.values(this.rentItems)
-            console.log(categories);
             return Object.values(this.rentItems).filter(cat =>
                 cat[0].toLowerCase()
                     .includes(this.searchQuery.toLowerCase())
@@ -81,16 +79,26 @@ export default {
     gap: $gap-md;
 }
 
-.card-category__title {
-    font-size: 1.5rem;
-    text-align: center;
-    color: $color-primary;
-    margin-bottom: $gap-md;
+.card-category {
 
-    padding: $gap-sm 0;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
 
-    background-color: $color-primary--light;
-    box-shadow: $shadow;
-    border-radius: 4px;
+    &__title {
+        font-size: 1.5rem;
+        text-align: center;
+        color: $color-primary;
+
+        padding: $gap-sm 0;
+
+        background-color: $color-primary--light;
+        box-shadow: $shadow;
+        border-radius: 4px;
+
+        @media (max-width: 425px) {
+            font-size: 1.25rem;
+        }
+    }
 }
 </style>
